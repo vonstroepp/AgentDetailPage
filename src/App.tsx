@@ -1,4 +1,7 @@
 import "./styles.css";
+import { useCallback, useEffect, useState } from "react";
+import { getAsset } from "./service/assetService";
+import { Asset } from "./types/types";
 import {
   Button,
   Layout,
@@ -13,10 +16,18 @@ const { Header, Content } = Layout;
 const { Paragraph, Title } = Typography;
 
 export default function App() {
+  const [asset, setAsset] = useState<Asset[]>([])
+  const [error, setError] = useState(false)
 
-  const getNextAsset = () => {
-    console.log("Button Clicked")
-  }
+  const getNextAsset = useCallback(() => {
+    getAsset()
+    .then((data: Asset[]) => setAsset(data))
+    .catch((error: string) => setError(true));
+  }, [])
+
+  useEffect(() => {
+    getNextAsset();
+  }, [getNextAsset])
 
   return (
     <>

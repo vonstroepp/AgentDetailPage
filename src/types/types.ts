@@ -1,4 +1,4 @@
-export type Agent = {
+export type Asset = {
     login: {
         username: string;
         uuid: string;
