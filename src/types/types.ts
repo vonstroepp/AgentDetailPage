@@ -7,6 +7,13 @@ export type Asset = {
         first: string;
         last: string;
     }
+    dob: {
+        age: string;
+        date: string;
+    }
+    picture: {
+        large: string;
+    }
     location: {
         city: string;
         state: string;
@@ -19,13 +26,6 @@ export type Asset = {
             offset: string;
             description: string;
         }
-        dob: {
-            age: string;
-            date: string;
-        }
-        picture: {
-            large: string;
-        }
-        gender: string;
     }
+    gender: string;
 }
