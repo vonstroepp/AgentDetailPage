@@ -15,9 +15,21 @@ import {
 const { Header, Content } = Layout;
 const { Paragraph, Title } = Typography;
 
+const eyeColors: Array<string> = [
+  "Blue",
+  "Green",
+  "Brown",
+  "Hazel",
+  "Black",
+  "Amber",
+  "Yellow",
+];
+
 export default function App() {
   const [asset, setAsset] = useState<Asset[]>([])
   const [error, setError] = useState(false)
+
+  const randomEyeColor: string = eyeColors[Math.floor(Math.random() * eyeColors.length)];
 
   const getNextAsset = useCallback(() => {
     getAsset()
@@ -85,7 +97,7 @@ export default function App() {
                   {value.dob.date} (Age: {value.dob.age})
                   </Descriptions.Item>
                   <Descriptions.Item label="Eye Color">
-                    Eye Color
+                  {randomEyeColor}
                   </Descriptions.Item>
                   <Descriptions.Item label="TimeZone Offset">
                   {value.location.timezone.offset}
