@@ -1,48 +1,46 @@
 :root {
-    --background: rgb(14, 14, 15);
-    --text-color: white;
-    --red: red;
+  --background: rgb(14, 14, 15);
+  --text-color: white;
+  --red: red;
 }
 
 body {
-    background-color: #000;
-  }
-  
-  .ant-layout-header,
-  .ant-layout-sider,
-  .ant-layout-footer {
-    background: var(--background);
-    color: var(--text-color);
-    font-size: 1.1rem;
-    /* border: 1 px solid var(--text-color); */
-  }
-  
-  .ant-typography {
-    background: var(--background);
-    padding: 0.4rem, 0.6rem;
-    overflow-wrap: break-word;
-    /* padding: 2rem; */
-    border: 1px solid var(--text-color);
-  }
-  
-  .ant-card,
-  .ant-card-bordered,
-  .ant-card-head,
-  .ant-descriptions-item-container {
-    background: var(--background);
-  }
-  
-  .ant-descriptions-title {
-    color: var(--red);
-    font-size: 1.2rem;
-  }
-  
-  .ant-descriptions-item-label,
-  .ant-descriptions-item-content,
-  .ant-layout-content {
-    color: var(--text-color);
-  }
-  
-  .ant-card-head-title {
-    color: var(--red);
-  }
+  background-color: var(--background);
+}
+
+.ant-descriptions-item-container {
+  padding: 0.2rem 2.1rem;
+  border: 1px solid var(--text-color);
+}
+
+.ant-layout-header,
+.ant-layout-sider,
+.ant-layout-footer {
+  background: var(--background);
+  color: var(--text-color);
+  font-size: 1.1rem;
+}
+
+.ant-typography {
+  background: var(--background);
+  padding: 0.4rem, 0.6rem;
+  overflow-wrap: break-word;
+  border: 1px solid var(--text-color);
+}
+
+.ant-descriptions-item-container {
+  background: var(--background);
+}
+
+.ant-descriptions-title {
+  color: var(--red);
+  font-size: 1.2rem;
+  border: 1px solid var(--red);
+  padding: 0.2rem 2.1rem;
+}
+
+.ant-descriptions-item-label,
+.ant-descriptions-item-content,
+.ant-layout-content {
+  color: var(--text-color);
+}
