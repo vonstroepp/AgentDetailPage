@@ -1,0 +1,48 @@
+:root {
+    --background: rgb(14, 14, 15);
+    --text-color: white;
+    --red: red;
+}
+
+body {
+    background-color: #000;
+  }
+  
+  .ant-layout-header,
+  .ant-layout-sider,
+  .ant-layout-footer {
+    background: var(--background);
+    color: var(--text-color);
+    font-size: 1.1rem;
+    /* border: 1 px solid var(--text-color); */
+  }
+  
+  .ant-typography {
+    background: var(--background);
+    padding: 0.4rem, 0.6rem;
+    overflow-wrap: break-word;
+    /* padding: 2rem; */
+    border: 1px solid var(--text-color);
+  }
+  
+  .ant-card,
+  .ant-card-bordered,
+  .ant-card-head,
+  .ant-descriptions-item-container {
+    background: var(--background);
+  }
+  
+  .ant-descriptions-title {
+    color: var(--red);
+    font-size: 1.2rem;
+  }
+  
+  .ant-descriptions-item-label,
+  .ant-descriptions-item-content,
+  .ant-layout-content {
+    color: var(--text-color);
+  }
+  
+  .ant-card-head-title {
+    color: var(--red);
+  }

@@ -2,6 +2,7 @@ import "./styles.css";
 import { useCallback, useEffect, useState } from "react";
 import { getAsset } from "./service/assetService";
 import { Asset } from "./types/types";
+import "./App.css";
 import {
   Button,
   Layout,
@@ -13,7 +14,7 @@ import {
 } from "antd"
 
 const { Header, Content } = Layout;
-const { Paragraph, Title } = Typography;
+const { Paragraph } = Typography;
 
 const eyeColors: Array<string> = [
   "Blue",
@@ -47,7 +48,7 @@ export default function App() {
         <Header>
           <Row>
             <Col span={22}>
-              <Title>Supersecret Asset Database Detail Page (confidential)</Title>
+              Asset Detail Page
             </Col>
             <Col span={2}>
               <Button type="primary" onClick={getNextAsset}>
@@ -60,7 +61,7 @@ export default function App() {
           {error !== true ? (
             asset.map((value) => {
               return (
-          <Paragraph code>
+          <Paragraph code key={value.login.uuid}>
             <Row>
               <Col>
                 <Image 
@@ -71,7 +72,7 @@ export default function App() {
                 />
               </Col>
               <Col>
-                <Descriptions title={"Asset Codename: " + value.login.username}>
+                <Descriptions title={"Asset Codename: " +  value.login.uuid + " A.K.A " + value.login.username }>
                   <Descriptions.Item label="First Name">
                   {value.name.first}
                   </Descriptions.Item>
